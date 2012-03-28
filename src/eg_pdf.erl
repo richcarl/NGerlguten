@@ -877,7 +877,7 @@ font_dir() ->
 	{error, bad_name} ->
 	    filename:join(this_dir(), "../priv/src");
 	N ->
-	    filename:join(N, "priv/src")
+	    filename:join(N, "src")
     end.
 
 get_font_program(Handler) ->
