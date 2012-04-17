@@ -1,8 +1,9 @@
 include ../conf/include.mk
 
 PDFS = eg_test1.pdf eg_test2.pdf eg_test3.pdf \
-	 eg_test4.pdf eg_test5.pdf process.pdf eg_test7.pdf kd_test1.pdf \
-	 eg_test6.pdf
+	 eg_test4.pdf eg_test5.pdf process.pdf \
+   kd_test1.pdf eg_test6.pdf
+	 #eg_test7.pdf
 #	 test1.pdf test2.pdf # erlguten.erl was broken :-(
 
 ERLGUTEN = ../erlguten
@@ -21,8 +22,8 @@ eg_test1.pdf: ../ebin/eg_test1.beam
 kd_test1.pdf: ../ebin/kd_test1.beam
 	erl -pa . -pa ../ebin -noshell -s kd_test1 test -s erlang halt
 
-eg_test7.pdf: ../ebin/eg_test7.beam
-	erl -pa . -pa ../ebin -noshell -s eg_test7 test -s erlang halt
+#eg_test7.pdf: ../ebin/eg_test7.beam
+#	erl -pa . -pa ../ebin -noshell -s eg_test7 test -s erlang halt
 
 eg_test2.pdf: ../ebin/eg_test2.beam
 	erl -pa . -pa ../ebin -noshell -s eg_test2 test -s erlang halt
